@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <nav class="navbar fixed-top container_NavBar navbar-expand-md px-4 bg-body-tertiary">
+    <nav class="navbar fixed-top shadow container_NavBar navbar-expand-md px-4 bg-body-tertiary">
       <div class="container-fluid d-flex">
         <a class="navbar-brand" href="#">
           <img src="./assets/logo.png" alt="Bootstrap" width="40" height="30">
@@ -20,22 +20,22 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <div class="collapse navbar-collapse mt-4 mt-md-0" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto text-center gap-2 mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link rounded-pill active" aria-current="page" href="#">Início</a>
+            <li class="nav-item" >
+              <a class="nav-link active rounded-pill" onclick="highlightItem(this)" href="#home">Início</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" href="#">Formação</a>
+            <li class="nav-item" >
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#education">Formação</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" href="#">Profissional</a>
+            <li class="nav-item" >
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#professional">Profissional</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" href="#">Contato</a>
+            <li class="nav-item" >
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#contact">Contato</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill ">Portfólio</a>
+            <li class="nav-item" >
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#portfolio">Portfólio</a>
             </li>
           </ul>
         </div>
@@ -43,19 +43,37 @@
     </nav>
   </header>
   <div class="container text-center pt-4">
-    <div class="row pt-5">
-      <div class="col-md-1 ">
-        Column
+    <div class="row align-items-start pt-5">
+      <div class="col-lg" id="home">
       </div>
-      <div class="col col-md-10">
-        Column
+      <div class="col-lg">
+        <section class="home p-5 m-5">
+          <h2>Home</h2>
+        </section>
+        <section class="education p-5 m-5" id="education">
+          <h2>education</h2>
+
+        </section>
+        <section class="professional p-5 m-5" id="professional">
+          <h2>professional</h2>
+
+        </section>
+        <section class="contact p-5 m-5" id="contact">
+          <h2>contact</h2>
+
+        </section>
+        <section class="portfolio p-5 m-5" id="portfolio">
+          <h2>portfolio</h2>
+
+        </section>
       </div>
-      <div class="col-md-1">
-        Column
+      <div class="col-lg">
       </div>
     </div>
   </div>
-  <footer class="fixed-bottom container_footer px-4 py-2">
+    
+  </div>
+  <footer class="fixed-bottom shadow container_footer px-4 py-2">
     <p class="m-0">
       Copyright © 2023 by Wisley A. Sousa | All Rights Reserved.
     </p>
@@ -80,5 +98,6 @@
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
