@@ -99,6 +99,7 @@ a, button {
 .container_Formation{
   background: var(--second-bg-color) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  min-height: 80vh;
 }
 
 .btnAccordion{
@@ -113,6 +114,8 @@ a, button {
 .container_Professional{
   border:1px solid var(--second-bg-color) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  min-height: 80vh;
+
 }
 .imgLogo {
   filter: drop-shadow(0 0 8px var(--white));
