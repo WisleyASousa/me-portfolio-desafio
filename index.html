@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <title>Portfólio - Wisley A. Sousa</title>
@@ -14,8 +15,8 @@
   <header>
     <nav class="navbar fixed-top shadow container_NavBar navbar-expand-md px-4 bg-body-tertiary">
       <div class="container-fluid d-flex">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/logo.png" alt="" width="40" height="30">
+        <a class="navbar-brand fs-2 rounded-pill px-2 logoName" href="#">
+          Wisley A. Sousa
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,7 +30,7 @@
               <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#education">Formação</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#professional">Profissional</a>
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#profissional">Profissional</a>
             </li>
             <li class="nav-item" >
               <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#portfolio">Portfólio</a>
@@ -41,14 +42,15 @@
         </div>
       </div>
     </nav>
+    
   </header>
   <div class="container text-center pt-5 mt-4">
     <div class="col">
-      <div class="col-lg" id="home">
+      <div class="col-lg">
       </div>
       <div class="col-lg d-flex flex-column text-white align-items-center justify-content-center">
         <!-- Home -->
-        <section class="home d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center container_body">
+        <section class="home d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center container_body" id="home">
           <div>
             <p class="display-6">Olá, sou</p>
             <h1 class="display-3 fw-bold">Wisley A. Sousa</h1>
@@ -89,7 +91,7 @@
                   <p>Finalizando 10 cursos da formação com carga horária
                    estimada em 75 horas.</p>
                    <div class="d-flex align-items-center  justify-content-center">
-                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/03e90862-4884-4f3e-b959-a827c4211139?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/03e90862-4884-4f3e-b959-a827c4211139?lang=pt_BR" class="d-flex btn_Contact align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
                        Certificado
                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                          <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -113,7 +115,7 @@
                   <p>Concluído em 25/02/23</p>
                   <p>Finalizando 6 cursos da formação com carga horária em 51 horas.</p>
                    <div class="d-flex align-items-center  justify-content-center">
-                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/0eb41120-cffc-4e4a-bc12-bc9eaf152f92?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/0eb41120-cffc-4e4a-bc12-bc9eaf152f92?lang=pt_BR" class="d-flex btn_Contact btn_Contact align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
                        Certificado
                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                          <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -138,7 +140,7 @@
                   <p>Formação com 8 cursos com carga horária em 60
                     horas.</p>
                    <div class="d-flex align-items-center  justify-content-center">
-                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/7405ff16-65f2-4e4b-825d-48cc2b0efa09?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/7405ff16-65f2-4e4b-825d-48cc2b0efa09?lang=pt_BR" class="d-flex btn_Contact align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
                        Certificado
                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                          <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
@@ -157,7 +159,7 @@
 
         <!-- Profissional -->
 
-        <section class=" container_Professional rounded-4 w-100 container_body py-5 my-5 d-flex flex-column flex-lg-row align-items-center justify-content-center" id="professional">
+        <section class=" container_Professional rounded-4 w-100 container_body py-5 my-5 d-flex flex-column flex-lg-row align-items-center justify-content-center" id="profissional">
           <div class="px-4">
             <p class="text-start">Estagiário - </p>
             <h3 class="display-4 text-start fw-bold py-2 py-lg-5">MAMBEE - A Fábrica Escola de Software - IFPI</h3>
@@ -199,7 +201,7 @@
             </div>
             <div class="d-flex gap-4 align-items-center justify-content-center">
             <!-- Button trigger modal -->
-            <button type="button" class="btn bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
               React.JS
               <img src="./assets/react.svg" class="img-fluid w-25" alt="..." />
             </button>
@@ -220,7 +222,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn bg-light text-dark btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <button type="button" class="btn btnTools bg-light text-dark btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
               Next.JS
             </button>
 
@@ -238,6 +240,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
 
@@ -245,8 +248,188 @@
 
         <!-- Portfólio -->
 
-        <section class="container_body p-5 m-5" id="portfolio">
-          <h2>portfolio</h2>
+        <section class=" rounded-4 w-100 container_body py-5 my-5 d-flex flex-column align-items-center justify-content-center" id="portfolio">
+          <p class="fw-bold fs-1 w-100 py-2">Projetos mais recente</p>
+          <div class="d-flex  flex-column gap-5 flex-md-row flex-wrap  justify-content-center align-items-center w-100 ">
+
+            <div class="card shadow-lg boxCardProjetos" style="width: 18rem;">
+              <img src="./assets/coffee.jpeg" class="card-img-top imgProjetos" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title  textCardProjetos fw-bold">Coffee Delivery</h5>
+                <p class="card-text text_justify">Desenvolver uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia,
+                  Adicionar uma quantidade específicas de itens no carrinho
+                  Aumentar ou remover a quantidade de itens no carrinho
+                  Formulário para o usuário preencher o seu endereço
+                  Exibir o total de itens no carrinho
+                  Exibir o valor total da soma de itens no carrinho multiplicados pelo valor.</p>
+                  <div>
+
+                    <p class="textCardProjetos">Tecnologias utilizadas:</p>
+  
+                    <div class="d-flex gap-3 justify-content-center">
+                      <button type="button"
+                        class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        React.JS
+                        <img src="./assets/react.svg" class="img-fluid w-25" alt="..." />
+                      </button>
+                      <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                      HTML
+                    </button>
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                      CSS
+                    </button>
+                    </div>
+                    <div class="pt-4 d-flex align-items-center justify-content-center gap-4">
+  
+                      <a class="icons rounded-circle" href="https://github.com/WisleyASousa/coffee-delivery-ig" title="Github"   target="_blank"  >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                      </svg>
+                    </a>
+                    <a class="icons rounded-circle" href="https://liwis-coffee-delivery.vercel.app/" title="Github"   target="_blank"  >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                
+              </div>
+                  </div>
+            <div class="card shadow-lg boxCardProjetos" style="width: 18rem;">
+              <img src="./assets/blog.jpeg" class="card-img-top imgProjetos" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title  textCardProjetos fw-bold">Blog Satisfied</h5>
+                <p class="card-text text_justify">Desenvolvendo um front-end para uma API RESTful. A interface deve exibir posts de um blog e, ao clicar em um post, os comentários associados. Interface criada do zero, usando dados aleatórios.</p>
+                <div>
+
+                  <p class="textCardProjetos ">Tecnologias utilizadas:</p>
+                  
+                  <div class="d-flex gap-3 justify-content-center">
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      React.JS
+                      <img src="./assets/react.svg" class="img-fluid w-25" alt="..." />
+                    </button>
+                    <button type="button" class="btn btnTools bg-light text-dark btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                      Next.JS
+                    </button>
+                  </div>
+                  <div class="pt-4 d-flex align-items-center justify-content-center gap-4">
+  
+                    <a class="icons rounded-circle" href="https://github.com/WisleyASousa/satisfied-alkabot-test" title="Github"   target="_blank"  >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                  </a>
+                  <a class="icons rounded-circle" href="https://satisfied-alkabot-test.vercel.app/" title="Github"   target="_blank"  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                      <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                    </svg>
+                  </a>
+                </div>
+  
+                </div>
+              </div>
+                </div>
+            <div class="card shadow-lg boxCardProjetos" style="width: 18rem;">
+              <img src="./assets/todo.jpeg" class="card-img-top imgProjetos" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title textCardProjetos fw-bold">ToDo</h5>
+                <p class="card-text text_justify">Este é um projeto inicial de um portfólio de frontend para uma "Lista de Tarefas" desenvolvido com ReactJS, CSS e HTML. O aplicativo permite adicionar tarefas à lista, excluí-las, exibir todas as tarefas adicionadas, as que falta concluir e as Deletadas.</p>
+                <div>
+
+                  <p class="textCardProjetos">Tecnologias utilizadas:</p>
+                  <div class="d-flex gap-3">
+  
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      React.JS
+                      <img src="./assets/react.svg" class="img-fluid w-25" alt="..." />
+                    </button>
+  
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                      HTML
+                    </button>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+                      <div class="modal-dialog modal-dialog-centered">
+  
+                        <div class="modal-content">
+  
+                          <div class="modal-header">
+                            <h1 class="modal-title fw-semibold text-dark fs-5" id="exampleModalLabel">HTML</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+  
+                          <div class="modal-body text-dark text_justify">
+                            HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web.
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+  
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                      CSS
+                    </button>
+                  
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+                      <div class="modal-dialog modal-dialog-centered">
+  
+                        <div class="modal-content">
+  
+                          <div class="modal-header">
+                            <h1 class="modal-title fw-semibold text-dark fs-5" id="exampleModalLabel">Cascading Style Sheets - CSS</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+  
+                          <div class="modal-body text-dark text_justify">
+                            Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags. Também é possível, adicionar estilos adicionando um link para um arquivo CSS que contém os estilos.
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="pt-4 d-flex align-items-center justify-content-center gap-4">
+  
+                    <a class="icons rounded-circle" href="https://github.com/WisleyASousa/ignite-desafio-01" title="Github"   target="_blank"  >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                  </a>
+                  <a class="icons rounded-circle" href="https://ignite-desafio-01-rust.vercel.app/" title="Github"   target="_blank"  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                      <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                    </svg>
+                  </a>
+                </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+
+          </div>
 
         </section>
 
@@ -286,6 +469,7 @@
       </a>
         
     </div>
+    <div class="progress-bar"></div>
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
