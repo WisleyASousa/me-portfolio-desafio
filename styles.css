@@ -98,6 +98,7 @@ a, button {
 
 .container_Formation{
   background: var(--second-bg-color) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
 }
 
 .btnAccordion{
@@ -107,6 +108,19 @@ a, button {
   
 }
 
+/* Profissional */
+
+.container_Professional{
+  border:1px solid var(--second-bg-color) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+}
+.imgLogo {
+  filter: drop-shadow(0 0 8px var(--white));
+  width: 200px;
+}
+.text_justify{
+  text-align: justify;
+}
 
 /* Footer */
 
