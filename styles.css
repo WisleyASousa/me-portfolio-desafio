@@ -2,6 +2,7 @@
   --color-primary: #D9D0E9;
   --color-title: #8142EF;
   --white: #FFFFFF;
+  --second-bg-color: rgb(50, 57, 70, 0.6);
   --gradient: linear-gradient(120deg, #FFFFFF 40%, #D9D0E9 100%);
   --btn-gradient: linear-gradient(90deg, #B542EF 40%, #B566F2 100%);
   --color-shadow: rgba(181, 102, 242,  0.8);
@@ -21,7 +22,7 @@
 body {
   font-size: 1rem !important;
   background-color: var(--bg-primary);
-  background-image: url("./assets/bg.png");
+  background-image: url("./assets/bg-2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -33,6 +34,7 @@ a, button {
   font-family: 'Nunito', sans-serif !important;
   font-weight: 700 !important;
   cursor: pointer !important;
+  text-decoration: none !important;
 }
 
 /* Header */
@@ -47,8 +49,6 @@ a, button {
   color: var(--white) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   transition: all 0.5s ease !important;
-
-  /* filter: drop-shadow(0 0 1rem var(--color-shadow)) !important; */
 }
 
 .nav-selected {
@@ -59,20 +59,63 @@ a, button {
 
 /* Body */
 
+/* Home */
 .container_body{
-  background: var(--gradient) !important;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
 }
+.img_home{
+  filter: drop-shadow(0 0 1rem var(--white));
+  width: 170px;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.btn_Contact{
+  background: var(--color-title) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+  
+}
+.btn_Contact:hover{
+  background: var(--btn-gradient) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+
+}
+
+/* Formação */
+
+.container_Formation{
+  background: var(--second-bg-color) !important;
+}
+
+.btnAccordion{
+  background: var(--color-title) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  
+}
+
+
+/* Footer */
+
 .container_footer {
   background-color: var(--color-primary) !important;;
   width: 100vw;
   text-align: center;
   border-color: var(--color-primary) !important;
 }
-
-/* Footer */
-
 
 .container_footer a:hover{
   border-color: var(--color-title) !important;

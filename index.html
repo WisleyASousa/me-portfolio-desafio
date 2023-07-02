@@ -32,40 +32,148 @@
               <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#professional">Profissional</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#contact">Contato</a>
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#portfolio">Portfólio</a>
             </li>
             <li class="nav-item" >
-              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#portfolio">Portfólio</a>
+              <a class="nav-link rounded-pill" onclick="highlightItem(this)" href="#contact">Contato</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div class="container text-center pt-4">
-    <div class="row align-items-start pt-5">
+  <div class="container text-center pt-5 mt-4">
+    <div class="col">
       <div class="col-lg" id="home">
       </div>
-      <div class="col-lg">
-        <section class="home p-5 m-5">
-          <h2>Home</h2>
+      <div class="col-lg d-flex flex-column text-white align-items-center justify-content-center">
+        <!-- Home -->
+        <section class="home d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center container_body">
+          <div>
+            <p class="display-6">Olá, sou</p>
+            <h1 class="display-3 fw-bold">Wisley A. Sousa</h1>
+            <h2 class="display-6 fw-bold">Desenvolvedor Front-end</h2>
+            <p class="py-2 px-lg-5 mx-lg-5">Wisley é um estudante do IFPI campus Picos, onde Ele cursa Análise e Desenvolvimento de Sistemas, nele se inclui a competência de a cada dia aprender mais e manter um ritmo que faça aquilo ser sempre o melhor para ele. Desde criança ele sempre teve poucos amigos e quase nunca teve alguém com quem poderia contar, mas nem por isso ele desistiu de sonhos e objetivos. Sempre foi um grande amante da Tecnologia. Nas horas vagas ele ama um bom Video Game.</p>
+            <a class=" py-2 px-4 rounded-pill btn_Contact"  href="#contact">Contate-me</a>
+          </div>
+          <img src="./assets/eu-1.PNG" class=" mt-4 pt-5 img-fluid img_home d-block d-md-none" alt="...">
+          <img src="./assets/eu-1.PNG" class=" mt-4 pt-5 img-fluid img_home d-none d-md-block" alt="...">
         </section>
-        <section class="education p-5 m-5" id="education">
-          <h2>education</h2>
+
+        <!-- Formação -->
+
+        <section class="container_Formation  d-flex flex-column flex-lg-row align-items-center justify-content-center container_body rounded-4 w-100 py-5 my-5" id="education">
+          <div class="px-4">
+            <p class="fs-3 text-start">Estou Cursando atualmente:</p>
+            <h3 class="display-4 fw-bold py-2 py-lg-5">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p class="text-start">INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA
+              DO PIAUÍ – CAMPUS PICOS</p>
+          </div>
+          <div class="w-100">
+
+          <h4 class=" py-md-4 fw-semibold">Cursos</h4>
+          <div class="accordion w-100 px-md-5" id="accordionFlushExample">
+            <div class="accordion-item  text-white bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button btnAccordion collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Iniciante em Programação
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body text-start">
+                  <p>Plataforma - ALURA</p>
+
+                  <p>Concluído em 01/08/22</p>
+                  <p>Finalizando 10 cursos da formação com carga horária
+                   estimada em 75 horas.</p>
+                   <div class="d-flex align-items-center  justify-content-center">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/03e90862-4884-4f3e-b959-a827c4211139?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                       Certificado
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        </a>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item  text-white bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button btnAccordion collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  HTML E CSS 
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <p>Plataforma - ALURA</p>
+
+                  <p>Concluído em 25/02/23</p>
+                  <p>Finalizando 6 cursos da formação com carga horária em 51 horas.</p>
+                   <div class="d-flex align-items-center  justify-content-center">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/0eb41120-cffc-4e4a-bc12-bc9eaf152f92?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                       Certificado
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        </a>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item  text-white bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button btnAccordion collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Desenvolva aplicações Web com JavaScript
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <p>Plataforma - ALURA</p>
+
+                  <p>Concluído em 27/02/2023</p>
+                  <p>Formação com 8 cursos com carga horária em 60
+                    horas.</p>
+                   <div class="d-flex align-items-center  justify-content-center">
+                     <a target="_blank" href="https://cursos.alura.com.br/degree/certificate/7405ff16-65f2-4e4b-825d-48cc2b0efa09?lang=pt_BR" class="d-flex align-items-center justify-content-center rounded-pill px-3 py-2 gap-2">
+                       Certificado
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                         <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                         <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        </a>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         </section>
-        <section class="professional p-5 m-5" id="professional">
+
+        <!-- Profissional -->
+
+        <section class="container_body p-5 m-5" id="professional">
           <h2>professional</h2>
 
         </section>
-        <section class="contact p-5 m-5" id="contact">
-          <h2>contact</h2>
 
-        </section>
-        <section class="portfolio p-5 m-5" id="portfolio">
+        <!-- Portfólio -->
+
+        <section class="container_body p-5 m-5" id="portfolio">
           <h2>portfolio</h2>
 
         </section>
+
+        <!-- Contato -->
+
+        <section class=" container_body p-5 m-5" id="contact">
+          <h2>contact</h2>
+
+        </section>
+
       </div>
       <div class="col-lg">
       </div>
