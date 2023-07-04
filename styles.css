@@ -57,6 +57,10 @@ a, button {
 
 /* Header */
 
+.container_NavBar {
+  transition: all 0.5s ease !important;
+}
+
 .container_NavBar, a{
   background-color: var(--color-primary) !important;
   color: var(--color-title) !important;
@@ -76,6 +80,19 @@ a, button {
 }
 .logoName {
   font-family: 'Julee', cursive !important;
+  animation: scaleLogo 3s infinite;
+
+}
+@keyframes scaleLogo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Body */
@@ -188,7 +205,9 @@ a, button {
   width: 250px !important;
   /* padding: 0 1rem !important; */
 }
-
+.areaText {
+  resize: none !important;
+}
 
 /* Footer */
 
