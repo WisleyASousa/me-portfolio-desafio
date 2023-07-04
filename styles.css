@@ -87,7 +87,7 @@ a, button {
 
 .logoName {
   font-family: 'Julee', cursive !important;
-  animation: scaleLogo 3s infinite;
+  animation: scaleLogo 2s infinite;
 
 }
 @keyframes scaleLogo {
@@ -226,6 +226,29 @@ a, button {
   resize: none !important;
 }
 
+.input_Contato {
+  background: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+}
+.input_Contato:hover {
+  background: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+}
+
+.btn_Enviar {
+  background: var(--color-title) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+}
+
+.btn_Enviar:hover {
+  background: var(--btn-gradient) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+}
+
 /* Footer */
 
 .container_footer {
@@ -234,7 +257,7 @@ a, button {
   border-color: var(--color-primary) !important;
 }
 
-.container_footer a:hover{
+.link_Redes:hover{
   border-color: var(--color-title) !important;
   transition: all 0.5s ease;
   transform: scale(1.2);
