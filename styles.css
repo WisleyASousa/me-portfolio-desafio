@@ -78,6 +78,13 @@ a, button {
   color: var(--white) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
 }
+
+.boxModal_SaibaMais {
+  background: var(--color-primary) !important;
+  color: var(--color-title) !important;
+  transition: all 0.5s ease !important;
+}
+
 .logoName {
   font-family: 'Julee', cursive !important;
   animation: scaleLogo 3s infinite;
@@ -118,7 +125,17 @@ a, button {
     transform: translateY(0);
   }
 }
-
+.btn_SaibaMais {
+  background: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+}
+.btn_SaibaMais:hover {
+  background: var(--color-title) !important;
+  color: var(--white) !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  transition: all 0.5s ease !important;
+}
 
 /* Formação */
 
@@ -220,6 +237,7 @@ a, button {
 .container_footer a:hover{
   border-color: var(--color-title) !important;
   transition: all 0.5s ease;
+  transform: scale(1.2);
 }
 
 /* Media Queries */
