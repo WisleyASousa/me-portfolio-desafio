@@ -13,6 +13,8 @@ window.addEventListener("load", function() {
   highlightItem(initialItem);
 });
 
+
+
 /*======= scroll progresso bar ========*/
 
 
