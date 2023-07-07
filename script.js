@@ -49,16 +49,17 @@ window.onscroll = () => {
 /*======= Animações========*/
 
 ScrollReveal({ 
-  // reset: true,
+  reset: true,
   distance: '100px',
-  duration: 1500, 
+  duration: 800, 
   delay: 100
 });
 
-ScrollReveal().reveal('.container_Formation, .top', { origin: 'top' });
-ScrollReveal().reveal('.container_Professional, .bottom',  { origin: 'bottom' });
-ScrollReveal().reveal('.right', { origin: 'left' });
-ScrollReveal().reveal('.left, .container_Contact', { origin: 'right' });
+ScrollReveal().reveal('.container_Formation, .top, .right, .container_Contact', { origin: 'top' });
+ScrollReveal().reveal('.container_Professional, .bottom, .left',  { origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.widget', { interval: 200 });
+// ScrollReveal().reveal('.right', { origin: 'left' });
+// ScrollReveal().reveal('.left, .container_Contact', { origin: 'right' });
 
 
 const typed = new Typed('.multiple-text', {
