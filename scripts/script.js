@@ -13,7 +13,92 @@ window.addEventListener("load", function() {
   highlightItem(initialItem);
 });
 
+/*======= Formulário ========*/
 
+
+  
+
+function submitForm(event) {
+    event.preventDefault(); // Impede o envio do formulário padrão
+
+
+    
+    // Obter os valores dos campos de entrada
+    var name = document.getElementById('nameInput').value;
+    var email = document.getElementById('emailInput').value;
+    var subject = document.getElementById('subjectInput').value;
+    var message = document.getElementById('messageInput').value;
+
+
+    // Validar se os campos estão vazios
+    if (name === '' || email === '' || subject === '' || message === '') {
+      document.getElementById('requiredAlert').style.display = 'block';
+      document.getElementById('successAlert').style.display = 'none';
+      // colcoar uma bordar vermelha nos campos vazios
+      if (name === '') {
+        document.getElementById('nameInput').style.border = '1px solid red';
+      } else {
+        document.getElementById('nameInput').style.border = '1px solid #ced4da';
+      }
+      if (email === '') {
+        document.getElementById('emailInput').style.border = '1px solid red';
+      } else {
+        document.getElementById('emailInput').style.border = '1px solid #ced4da';
+      }
+      if (subject === '') {
+        document.getElementById('subjectInput').style.border = '1px solid red';
+      } else {
+        document.getElementById('subjectInput').style.border = '1px solid #ced4da';
+      }
+      if (message === '') {
+        document.getElementById('messageInput').style.border = '1px solid red';
+      } else {
+        document.getElementById('messageInput').style.border = '1px solid #ced4da';
+      }
+
+      return; // Impede o processamento adicional
+    }
+
+    // Criar um objeto com as informações do formulário
+    var formData = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    };
+
+    // Converter o objeto para JSON
+    var jsonData = JSON.stringify(formData);
+
+    console.log(jsonData);
+
+    // Limpar os campos do formulário
+    document.getElementById('nameInput').value = '';
+    document.getElementById('emailInput').value = '';
+    document.getElementById('subjectInput').value = '';
+    document.getElementById('messageInput').value = '';
+
+    document.getElementById('requiredAlert').style.display = 'none';
+    document.getElementById('successAlert').style.display = 'block';
+    document.getElementById('submitEnviar').classList.add('btn_EnviarOut');
+
+
+    document.getElementById('nameInput').style.border = '1px solid #ced4da';
+    document.getElementById('emailInput').style.border = '1px solid #ced4da';
+    document.getElementById('subjectInput').style.border = '1px solid #ced4da';
+    document.getElementById('messageInput').style.border = '1px solid #ced4da';
+
+
+    setTimeout(function() {
+
+      document.getElementById('requiredAlert').style.display = 'none';
+      document.getElementById('successAlert').style.display = 'none';
+      document.getElementById('submitEnviar').classList.remove('btn_EnviarOut');
+    }
+    , 3000);
+
+
+  }
 
 /*======= scroll progresso bar ========*/
 
@@ -79,3 +164,5 @@ const typedMe = new Typed('.multiple-text-2', {
   backDelay: 500,
   loop: true
 });
+
+

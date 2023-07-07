@@ -91,7 +91,7 @@
 
         <section class="d-flex  align-items-center justify-content-center container_body  w-100" id="education">
           <div
-            class="container_Formation d-flex flex-column flex-lg-row align-items-center justify-content-center ">
+            class="container_Formation d-flex flex-column w-50 flex-lg-row align-items-center justify-content-center ">
             <div class="px-4">
               <p class="fs-3 text-start">Estou Cursando atualmente:</p>
               <h3 class="display-5 fw-bold py-2 py-lg-5">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
@@ -576,34 +576,46 @@
                 </svg>
               </a>
             </div>
-            <form class="container_Form ">
 
+            <form class="container_Form "  onsubmit="submitForm(event)">
+              
 
               <div class="form-floating my-3 widget">
-                <input type="text" class="form-control input_Contato rounded-4" id="floatingInput"
-                  placeholder="name@example.com">
-                <label for="floatingInput">Nome</label>
+                <input type="text" class="form-control input_Contato rounded-4" id="nameInput"
+                  placeholder="Seu nome">
+                <label for="nameInput">Nome</label>
               </div>
 
               <div class="form-floating my-3 widget">
-                <input type="email" class="form-control input_Contato rounded-4" id="floatingInput"
+                <input type="email" class="form-control input_Contato rounded-4" id="emailInput"
                   placeholder="name@example.com">
-                <label for="floatingInput">E-mail</label>
+                <label for="emailInput">E-mail</label>
               </div>
 
               <div class="form-floating my-3 widget">
-                <input type="text" class="form-control input_Contato rounded-4" id="floatingInput"
-                  placeholder="name@example.com">
-                <label for="floatingInput">Assunto</label>
+                <input type="text" class="form-control input_Contato rounded-4" id="subjectInput"
+                  placeholder="o usando do contato">
+                <label for="subjectInput">Assunto</label>
               </div>
 
               <div class="form-floating widget">
-                <textarea class="form-control areaText input_Contato rounded-4" placeholder="Leave a comment here"
-                  id="floatingTextarea2" style="height: 120px"></textarea>
-                <label for="floatingTextarea2">Sua mensagem</label>
+                <textarea class="form-control areaText input_Contato rounded-4" placeholder="Digite sua mensagem aqui"
+                  id="messageInput" style="height: 120px"></textarea>
+                <label for="messageInput">Sua mensagem</label>
               </div>
-              <button type="submit" class="btn mt-3 widget btn_Enviar">Enviar</button>
+              <button type="submit" class="btn my-3 widget btn_Enviar" id="submitEnviar">Enviar</button>
+
+              <div class="alert msgAlert alert-danger " role="alert"  id="requiredAlert">
+                Por favor, preencha todos os campos!
+
+              </div>
+
+              <div class="alert msgSucess alert-success alert-dismissible fade show" role="alert"  id="successAlert">
+                Mensagem enviada com sucesso!
+
+              </div>
             </form>
+            
 
           </div>
 
