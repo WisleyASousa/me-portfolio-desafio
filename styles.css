@@ -58,11 +58,16 @@ a, button {
   cursor: pointer !important;
   text-decoration: none !important;
 }
+.widget {
+  visibility: hidden;
+}
 
 /* Header */
 
 .container_NavBar {
   transition: all 0.5s ease !important;
+  background-color: var(--color-primary) !important;
+  color: var(--color-title) !important;
 }
 
 .container_NavBar, a{
@@ -151,7 +156,8 @@ a, button {
 .container_Formation{
   background: var(--second-bg-color) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
-  min-height: 70vh !important;
+  min-height: 100vh !important;
+  min-width: 100vw !important;
 }
 
 .btnAccordion{
@@ -190,6 +196,17 @@ a, button {
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   width: 300px !important;
   height: 800px !important;
+}
+.img_background {
+  background-image: url("./assets/bg-4.jpg") !important;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-top: 5rem;
+  min-height: 100vh !important;
+  min-width: 100vw !important;
 }
 
 .boxCardProjetos:hover{
