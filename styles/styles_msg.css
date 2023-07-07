@@ -1,0 +1,11 @@
+
+.container_Msgs{
+  background-image: url("../assets/backgrounds/bg-msgs.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
+  min-height: 60vh !important;
+}
