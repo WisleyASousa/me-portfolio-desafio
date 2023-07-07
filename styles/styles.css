@@ -44,7 +44,7 @@ html {
 body {
   font-size: 1rem !important;
   background-color: var(--bg-primary);
-  background-image: url("./assets/bg-2.jpg");
+  background-image: url("../assets/backgrounds/bg-2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -198,7 +198,7 @@ a, button {
   height: 800px !important;
 }
 .img_background {
-  background-image: url("./assets/bg-4.jpg") !important;
+  background-image: url("../assets/backgrounds/bg-4.jpg") !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   background-size: cover;
   background-position: center;
@@ -232,7 +232,7 @@ a, button {
 /* Contato */
 
 .container_Contact{
-  background-image: url("./assets/bg-contact.jpg");
+  background-image: url("../assets/backgrounds/bg-contact.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
