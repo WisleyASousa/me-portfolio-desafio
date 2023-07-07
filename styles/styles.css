@@ -61,6 +61,17 @@ a, button {
 .widget {
   visibility: hidden;
 }
+.msgAlert {
+  display: none; /* Esconder as divs por padrão */
+  animation: rubberBand; 
+  animation-duration: 0.5s; 
+}
+.msgSucess{
+  display: none; /* Esconder as divs por padrão */
+  animation: bounceInRight; 
+  animation-duration: 1s;
+}
+
 
 /* Header */
 
@@ -114,29 +125,14 @@ a, button {
   }
 }
 
-.my-element {
+/* .my-element {
   display: inline-block;
   margin: 0 0.5rem;
 
-  animation: rubberBand; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 1s; /* don't forget to set a duration! */
-}
-
-/* .animation{
-  animation: scaleIcons 1s ;
-}
-
-@keyframes scaleIcons {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.6);
-  }
-  100% {
-    transform: scale(1);
-  }
+  animation: rubberBand;
+  animation-duration: 1s; 
 } */
+
 
 /* Body */
 
@@ -294,7 +290,11 @@ a, button {
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   transition: all 0.5s ease !important;
 }
-
+.btn_EnviarOut {
+  animation: bounceOutRight; 
+  animation-duration: 1s; 
+}
+  
 .btn_Enviar:hover {
   background: var(--btn-gradient) !important;
   color: var(--white) !important;
