@@ -1,7 +1,7 @@
 function highlightItem(element) {
   // Remove a classe .nav-selected de todos os itens
-  var items = document.getElementsByTagName("a");
-  for (var i = 0; i < items.length; i++) {
+  let items = document.getElementsByTagName("a");
+  for (let i = 0; i < items.length; i++) {
     items[i].classList.remove("nav-selected");
   }
 
@@ -9,25 +9,34 @@ function highlightItem(element) {
   element.classList.add("nav-selected");
 }
 window.addEventListener("load", function() {
-  var initialItem = document.querySelector("nav ul li:first-child a");
+  let initialItem = document.querySelector("nav ul li:first-child a");
   highlightItem(initialItem);
 });
 
 /*======= Formulário ========*/
 
 
-  
+ // Recuperar a lista de mensagens do localStorage, se existir
+let messageList = JSON.parse(localStorage.getItem('messageList')) || [];
+// Exibir a quantidade de mensagens na tela
+
+function showMessageCount() {
+  let messageCountElement = document.getElementById('messageCount');
+  messageCountElement.textContent = messageList.length;
+}
+let messageCountElement = document.getElementById('messageCount');
+messageCountElement.textContent = 0 + messageList.length;
 
 function submitForm(event) {
     event.preventDefault(); // Impede o envio do formulário padrão
-
+    
 
     
     // Obter os valores dos campos de entrada
-    var name = document.getElementById('nameInput').value;
-    var email = document.getElementById('emailInput').value;
-    var subject = document.getElementById('subjectInput').value;
-    var message = document.getElementById('messageInput').value;
+    let name = document.getElementById('nameInput').value;
+    let email = document.getElementById('emailInput').value;
+    let subject = document.getElementById('subjectInput').value;
+    let message = document.getElementById('messageInput').value;
 
 
     // Validar se os campos estão vazios
@@ -60,17 +69,20 @@ function submitForm(event) {
     }
 
     // Criar um objeto com as informações do formulário
-    var formData = {
+    let formData = {
       name: name,
       email: email,
       subject: subject,
       message: message
     };
 
-    // Converter o objeto para JSON
-    var jsonData = JSON.stringify(formData);
+    messageList.push(formData);
+    localStorage.setItem('messageList', JSON.stringify(messageList));
 
-    console.log(jsonData);
+    // Converter o objeto para JSON
+    let jsonData = JSON.stringify(formData);
+
+    console.log(messageList);
 
     // Limpar os campos do formulário
     document.getElementById('nameInput').value = '';
@@ -87,6 +99,8 @@ function submitForm(event) {
     document.getElementById('emailInput').style.border = '1px solid #ced4da';
     document.getElementById('subjectInput').style.border = '1px solid #ced4da';
     document.getElementById('messageInput').style.border = '1px solid #ced4da';
+    showMessageCount()
+    document.getElementById('linkMsgs').classList.add('notificacao');
 
 
     setTimeout(function() {
@@ -94,13 +108,17 @@ function submitForm(event) {
       document.getElementById('requiredAlert').style.display = 'none';
       document.getElementById('successAlert').style.display = 'none';
       document.getElementById('submitEnviar').classList.remove('btn_EnviarOut');
+      document.getElementById('linkMsgs').classList.remove('notificacao');
+
     }
-    , 3000);
+    , 5000);
 
 
   }
+  
 
 /*======= scroll progresso bar ========*/
+
 
 
 window.addEventListener('scroll', function() {

@@ -108,6 +108,12 @@ a, button {
   transition: all 0.5s ease !important;
 }
 
+.notificacao {
+  
+  animation: bounce; 
+  animation-duration: 0.5s; 
+}
+
 .logoName {
   font-family: 'Julee', cursive !important;
   animation: scaleLogo 2s infinite;
@@ -188,6 +194,10 @@ a, button {
   color: var(--white) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   
+}
+
+.box_Cursos {
+  width: 300px !important;
 }
 
 /* Profissional */
@@ -325,6 +335,9 @@ a, button {
   .container_Form {
     width: 400px !important;
   }
+  .box_Cursos {
+    width: 400px !important;
+  }
 }
 @media (min-width: 1024px) {
   .container_body{
@@ -332,5 +345,8 @@ a, button {
   }
   .container_Contact{
     margin-bottom: 0rem;
+  }
+  .box_Cursos {
+    width: 700px !important;
   }
 }
