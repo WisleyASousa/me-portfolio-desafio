@@ -1,3 +1,4 @@
+
 function highlightItem(element) {
   // Remove a classe .nav-selected de todos os itens
   let items = document.getElementsByTagName("a");
@@ -24,8 +25,7 @@ function showMessageCount() {
   let messageCountElement = document.getElementById('messageCount');
   messageCountElement.textContent = messageList.length;
 }
-let messageCountElement = document.getElementById('messageCount');
-messageCountElement.textContent = 0 + messageList.length;
+showMessageCount();
 
 function submitForm(event) {
     event.preventDefault(); // Impede o envio do formulário padrão
@@ -73,7 +73,8 @@ function submitForm(event) {
       name: name,
       email: email,
       subject: subject,
-      message: message
+      message: message,
+      date: new Date().toLocaleDateString() 
     };
 
     messageList.push(formData);
@@ -82,7 +83,7 @@ function submitForm(event) {
     // Converter o objeto para JSON
     let jsonData = JSON.stringify(formData);
 
-    console.log(messageList);
+    showMessages();
 
     // Limpar os campos do formulário
     document.getElementById('nameInput').value = '';
@@ -116,6 +117,63 @@ function submitForm(event) {
 
   }
   
+
+// Obtendo a referência do elemento onde os cards serão exibidos
+let cardContainer = document.getElementById('cardContainer');
+
+// Função para remover uma mensagem específica
+function removeMessage(index) {
+  // Remove a mensagem da lista pelo índice
+  messageList.splice(0, 0);
+
+  // Atualiza o armazenamento local com a nova lista de mensagens
+  localStorage.setItem('messageList', JSON.stringify(messageList));
+  
+  // Reexibe os cards após a remoção
+  showMessages();
+}
+
+// Função para criar e exibir os cards
+function showMessages() {
+  // Obtendo a referência do elemento onde os cards serão exibidos
+  let cardContainer = document.getElementById('cardContainer');
+
+  // Limpar o conteúdo existente
+  cardContainer.innerHTML = '';
+
+  // Percorrer a lista de mensagens
+  for (let i = 0; i < messageList.length; i++) {
+    // Criar os elementos do card
+    let card = document.createElement('div');
+    card.className = 'card widget text-center';
+    card.style.width = '18rem';
+
+    let cardHeader = document.createElement('div');
+    cardHeader.className = 'card-header';
+    cardHeader.innerHTML = '<h5>' + messageList[i].name + '</h5>';
+
+    let cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    cardBody.innerHTML = '<p class="card-text">' + messageList[i].message + '</p>';
+
+    let cardFooter = document.createElement('div');
+    cardFooter.className = 'card-footer d-flex flex-column align-items-center gap-4 text-body-secondary';
+    cardFooter.innerHTML = messageList[i].date + // Utiliza a propriedade "date" do objeto
+      '<button type="button" class="btn w-50 btn-outline-danger" onclick="removeMessage(' + i + ')">Danger</button>';
+
+    // Adicionar os elementos ao card
+    card.appendChild(cardHeader);
+    card.appendChild(cardBody);
+    card.appendChild(cardFooter);
+
+    // Adicionar o card ao container
+    cardContainer.appendChild(card);
+  }
+}
+
+
+// Chamada inicial para exibir os cards existentes
+showMessages();
 
 /*======= scroll progresso bar ========*/
 
