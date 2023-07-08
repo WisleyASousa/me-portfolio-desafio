@@ -124,7 +124,7 @@ let cardContainer = document.getElementById('cardContainer');
 // Função para remover uma mensagem específica
 function removeMessage(index) {
   // Remove a mensagem da lista pelo índice
-  messageList.splice(0, 0);
+  messageList.splice(index, 1);
 
   // Atualiza o armazenamento local com a nova lista de mensagens
   localStorage.setItem('messageList', JSON.stringify(messageList));
