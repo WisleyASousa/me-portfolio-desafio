@@ -27,6 +27,8 @@ function showMessageCount() {
 }
 showMessageCount();
 
+
+
 function submitForm(event) {
     event.preventDefault(); // Impede o envio do formulário padrão
     
@@ -46,21 +48,28 @@ function submitForm(event) {
       // colcoar uma bordar vermelha nos campos vazios
       if (name === '') {
         document.getElementById('nameInput').style.border = '1px solid red';
+        document.getElementById('nameInput').classList.add('inputAlert');
+
       } else {
         document.getElementById('nameInput').style.border = '1px solid #ced4da';
       }
       if (email === '') {
         document.getElementById('emailInput').style.border = '1px solid red';
+        document.getElementById('emailInput').classList.add('inputAlert');
+
       } else {
         document.getElementById('emailInput').style.border = '1px solid #ced4da';
       }
       if (subject === '') {
         document.getElementById('subjectInput').style.border = '1px solid red';
+        document.getElementById('subjectInput').classList.add('inputAlert');
+
       } else {
         document.getElementById('subjectInput').style.border = '1px solid #ced4da';
       }
       if (message === '') {
         document.getElementById('messageInput').style.border = '1px solid red';
+        document.getElementById('messageInput').classList.add('inputAlert');
       } else {
         document.getElementById('messageInput').style.border = '1px solid #ced4da';
       }
@@ -79,9 +88,6 @@ function submitForm(event) {
 
     messageList.push(formData);
     localStorage.setItem('messageList', JSON.stringify(messageList));
-
-    // Converter o objeto para JSON
-    let jsonData = JSON.stringify(formData);
 
     showMessages();
 
@@ -102,7 +108,7 @@ function submitForm(event) {
     document.getElementById('messageInput').style.border = '1px solid #ced4da';
     showMessageCount()
     document.getElementById('linkMsgs').classList.add('notificacao');
-
+    
 
     setTimeout(function() {
 
@@ -110,16 +116,32 @@ function submitForm(event) {
       document.getElementById('successAlert').style.display = 'none';
       document.getElementById('submitEnviar').classList.remove('btn_EnviarOut');
       document.getElementById('linkMsgs').classList.remove('notificacao');
-
+      
     }
     , 5000);
 
+    // Adicione um evento de clique à caixa de entrada do formulário
+    document.getElementById('inputBox').addEventListener('click', function() {
+      // Código a ser executado quando o usuário clicar na caixa de entrada
+      document.getElementById('successAlert').style.display = 'none';
+
+      // Ocultar o alerta "requiredAlert"
+      document.getElementById('requiredAlert').style.display = 'none';
+
+      // Ocultar o alerta "successAlert"
+      document.getElementById('successAlert').style.display = 'none';
+
+      // Remover a classe "btn_EnviarOut" do botão "submitEnviar"
+      document.getElementById('submitEnviar').classList.remove('btn_EnviarOut');
+
+      // Remover a classe "notificacao" do link "linkMsgs"
+      document.getElementById('linkMsgs').classList.remove('notificacao');
+
+
+    });
 
   }
   
-
-// Obtendo a referência do elemento onde os cards serão exibidos
-let cardContainer = document.getElementById('cardContainer');
 
 // Função para remover uma mensagem específica
 function removeMessage(index) {
@@ -128,11 +150,44 @@ function removeMessage(index) {
 
   // Atualiza o armazenamento local com a nova lista de mensagens
   localStorage.setItem('messageList', JSON.stringify(messageList));
-  
-  // Reexibe os cards após a remoção
-  showMessages();
+
+  showMessages(); 
 }
 
+// Evento load para executar a função successRemove após a página ser recarregada
+// window.addEventListener('load', function() {
+//   // Chama a função successRemove após a página ser recarregada
+//   successRemove();
+// });
+  // Reexibe os cards após a remoção
+  // chamar funcao de sucesso de exclusao apos o reload
+
+// criar funcao de sucesso de exclusao de msg e remover depois de 3 segundos
+// document.getElementById('msgExcluida').style.display = 'none';
+
+
+function successRemove() {
+  document.getElementById('msgExcluida').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('msgExcluida').style.display = 'none';
+    if (messageList.length !== 0) {
+      // Recarrega a página
+      location.reload();
+    }
+  }
+  , 2000);
+}
+
+// Adicione um evento de clique ao elemento pai `cardContainer`
+cardContainer.addEventListener('click', function(event) {
+  successRemove()
+  if (event.target.classList.contains('btn-outline-danger')) {
+    // Verifique se o botão "Excluir" foi clicado
+    let index = event.target.getAttribute('data-index');
+    removeMessage(index);
+
+  }
+});
 // Função para criar e exibir os cards
 function showMessages() {
   // Obtendo a referência do elemento onde os cards serão exibidos
@@ -141,8 +196,13 @@ function showMessages() {
   // Limpar o conteúdo existente
   cardContainer.innerHTML = '';
 
-  // Percorrer a lista de mensagens
-  for (let i = 0; i < messageList.length; i++) {
+  // colocar texto caso não tenha mensagens
+  if (messageList.length === 0) {
+    cardContainer.innerHTML = '<p class="text-center text-white bottom">Nenhuma mensagem recebida</p>';
+    return;
+  }
+
+  messageList.forEach((message, i) => {
     // Criar os elementos do card
     let card = document.createElement('div');
     card.className = 'card widget text-center';
@@ -150,16 +210,33 @@ function showMessages() {
 
     let cardHeader = document.createElement('div');
     cardHeader.className = 'card-header';
-    cardHeader.innerHTML = '<h5>' + messageList[i].name + '</h5>';
+    cardHeader.innerHTML = '<h5>' + message.name + '</h5>' + '<p>' + message.email + '</p>';
 
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
-    cardBody.innerHTML = '<p class="card-text">' + messageList[i].message + '</p>';
+    cardBody.innerHTML = '<p class="card-text">' + message.message + '</p>';
 
     let cardFooter = document.createElement('div');
     cardFooter.className = 'card-footer d-flex flex-column align-items-center gap-4 text-body-secondary';
-    cardFooter.innerHTML = messageList[i].date + // Utiliza a propriedade "date" do objeto
-      '<button type="button" class="btn w-50 btn-outline-danger" onclick="removeMessage(' + i + ')">Danger</button>';
+    cardFooter.innerHTML = message.date;
+
+    // Criar o botão de exclusão
+    let deleteButton = document.createElement('button');
+    deleteButton.type = 'button';
+    deleteButton.className = 'btn w-50 btn-outline-danger';
+    deleteButton.setAttribute('data-index', i);
+    deleteButton.innerHTML = 'Excluir';
+
+    // Adicionar evento de clique ao botão de exclusão
+    deleteButton.addEventListener('click', function() {
+      // Chamar a função successRemove quando o botão de exclusão for clicado
+      successRemove();
+      // Outras ações que você deseja executar ao clicar no botão de exclusão
+      // ...
+    });
+
+    // Adicionar o botão de exclusão ao rodapé do card
+    cardFooter.appendChild(deleteButton);
 
     // Adicionar os elementos ao card
     card.appendChild(cardHeader);
@@ -168,12 +245,15 @@ function showMessages() {
 
     // Adicionar o card ao container
     cardContainer.appendChild(card);
-  }
+  });
 }
+
+
 
 
 // Chamada inicial para exibir os cards existentes
 showMessages();
+// document.getElementById('msgExcluida').style.display = 'none';
 
 /*======= scroll progresso bar ========*/
 
