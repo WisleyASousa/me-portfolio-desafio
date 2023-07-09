@@ -66,14 +66,28 @@ a, button {
   visibility: hidden;
 }
 .msgAlert {
+
+  position: absolute;
+  left: 575px;
+
   display: none; /* Esconder as divs por padrão */
   animation: rubberBand; 
   animation-duration: 0.5s; 
 }
+
+
 .msgSucess{
+  position: absolute;
+  left: 575px;
+
   display: none; /* Esconder as divs por padrão */
   animation: bounceInRight; 
   animation-duration: 1s;
+}
+
+.inputAlert {
+  animation: tada; 
+  animation-duration: 0.5s;
 }
 
 

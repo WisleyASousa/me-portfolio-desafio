@@ -443,7 +443,6 @@
                 </div>
               </div>
             </div>
-            <div id="cardContainer" style="display: none;"></div>
             <div class="card bottom shadow-lg boxCardProjetos" style="width: 18rem;">
               <img src="./assets/imgs/todo.jpeg" class="card-img-top imgProjetos" alt="...">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -527,8 +526,9 @@
                 <img src="./assets/svgs/whatsapp.svg" alt="WhatsApp" width="28" height="28">
               </a>
             </div>
-
-            <form class="container_Form "  onsubmit="submitForm(event)">
+            <div class="alert alert-info d-none" role="alert" id="msgExcluida">
+            </div>
+            <form class="container_Form "  id="inputBox" onsubmit="submitForm(event)">
               
 
               <div class="form-floating my-3 widget">
@@ -556,12 +556,12 @@
               </div>
               <button type="submit" class="btn my-3 widget btn_Enviar" id="submitEnviar">Enviar</button>
 
-              <div class="alert msgAlert alert-danger " role="alert"  id="requiredAlert">
+              <div class="alert msgAlert alert-danger  " role="alert"  id="requiredAlert">
                 Por favor, preencha todos os campos!
 
               </div>
 
-              <div class="alert msgSucess alert-success alert-dismissible fade show" role="alert"  id="successAlert">
+              <div class="alert msgSucess alert-success alert-dismissible " role="alert"  id="successAlert">
                 Mensagem enviada com sucesso!
 
               </div>
@@ -602,6 +602,7 @@
       </a>
     </div>
     <div class="progress-bar"></div>
+    <div id="cardContainer" style="display: none;"></div>
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

@@ -30,7 +30,7 @@
           <ul class="navbar-nav ms-auto text-center gap-2 mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active rounded-pill" title="Início" onclick="highlightItem(this)"
-                href="../index.html"> ir para Início</a>
+                href="../index.html"> Voltar</a>
             </li>
           </ul>
         </div>
@@ -42,13 +42,15 @@
   <main class="d-flex container_body align-items-center justify-content-center">
 
     <div class="container_Msgs w-100 d-flex align-items-center justify-content-center flex-column">
-      <p id="messageCount"></p>
+      <p id="messageCount" class="pt-5"></p>
       <h2 class="text-white display-6 fw-bold top m-0 py-4">Mensagens de Contato</h2>
-      <div class="d-flex gap-4 justify-content-center flex-wrap">
+      <div class="d-flex gap-4 justify-content-center pb-5 flex-wrap">
         <div id="cardContainer" class="d-flex gap-4 justify-content-center flex-wrap"></div>
-
+         
       </div>
-  
+      <div class="alert alert-info msg_Excluir" role="alert" id="msgExcluida">
+        Mensagem excluída com sucesso!
+      </div>
   </main>
 
   <footer class="fixed-bottom shadow w-100 container_footer px-4 py-3">
