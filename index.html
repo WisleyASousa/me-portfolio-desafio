@@ -61,8 +61,6 @@
                 </span>
                 <img src="./assets/svgs/chat.svg" alt="Github" width="16" height="16">
               </a>
-              <!-- <a class="nav-link rounded-pill" title="Mensagens" onclick="highlightItem(this)" href="./pages/messages.html">
-            </a> -->
             </li>
           </ul>
         </div>
@@ -74,13 +72,15 @@
     <div class="col">
       <div class="col-lg d-flex flex-column text-white align-items-center justify-content-center">
         <!-- Home -->
+        
         <section
-          class="home d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center container_body"
+          class="home d-flex flex-column flex-lg-row-reverse  align-items-center justify-content-center container_body"
           id="home">
+          
           <div class=" d-flex flex-column align-items-center justify-content-center">
             <p class="display-6">Olá, sou</p>
             <h1 class="display-3 fw-bold  animate__animated animate__heartBeat animate__repeat-2">Wisley A. Sousa</h1>
-
+            
             <h2 class="display-6 fw-bold animate__animated animate__backInLeft"><span class="multiple-text"></span></h2>
             <p class="py-2 w-75 text_justify px-lg-5 mx-lg-5">Wisley é um estudante do IFPI campus Picos, onde Ele cursa
               Análise e
@@ -88,18 +88,18 @@
               que faça aquilo ser sempre o melhor para ele. Desde criança ele sempre teve poucos amigos e quase nunca
               teve alguém com quem poderia contar, mas nem por isso ele desistiu de sonhos e objetivos. Sempre foi um
               grande amante da Tecnologia. Nas horas vagas ele ama um bom Video Game.</p>
-            <a class=" py-2 px-4 rounded-pill btn_SaibaMais " href="#contact">Saiba mais</a>
+              <button class="py-2 px-4 rounded-pill btn_SaibaMais" id="saiba-mais-btn">Saiba mais</button>
           </div>
-          <img src="./assets/me/eu-1.PNG" class=" mt-4 right pt-5 img-fluid img_home" alt="...">
+          <img src="./assets/me/eu-1.PNG" class=" mt-4 pt-5 img-fluid img_home" alt="...">
         </section>
-
-
+        
+       
 
         <!-- Formação -->
 
-        <section class="d-flex  align-items-center justify-content-center container_body  w-100" id="education">
+        <section class="d-flex align-items-center justify-content-center container_body  w-100" id="education">
           <div
-            class="container_Formation d-flex flex-column w-50 flex-lg-row align-items-center justify-content-center ">
+            class="container_Formation px-lg-5 d-flex flex-column w-50 flex-lg-row align-items-center justify-content-center ">
             <div class="px-4">
               <p class="fs-3 text-start">Estou Cursando atualmente:</p>
               <h3 class="display-5 fw-bold py-2 py-lg-5">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
@@ -351,10 +351,13 @@
           id="portfolio">
           <p class="fw-bold fs-1 w-100 py-2">Projetos mais recente</p>
           <div
-            class="d-flex   flex-column gap-5 flex-md-row flex-wrap  justify-content-center align-items-center w-100 ">
+            class="d-flex flex-column gap-5 flex-md-row flex-wrap  justify-content-center align-items-center w-100 ">
 
             <div class="card bottom shadow-lg boxCardProjetos" style="width: 18rem;">
-              <img src="./assets//imgs/coffee.jpeg" class="card-img-top imgProjetos" alt="...">
+              <video id="myVideo" class="video_Projetos" controls autoplay>
+                <source src="./assets/videos/LiWisCoffeeDelivery.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos HTML5.
+              </video>
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title  textCardProjetos fw-bold">Coffee Delivery</h5>
                 <p class="card-text text_justify">Desenvolver uma aplicação para gerenciar um carrinho de compras de uma
@@ -404,7 +407,10 @@
               </div>
             </div>
             <div class="card top shadow-lg boxCardProjetos" style="width: 18rem;">
-              <img src="./assets/imgs/blog.jpeg" class="card-img-top imgProjetos" alt="...">
+              <video id="myVideo" class="video_Projetos" controls autoplay>
+                <source src="./assets/videos/Satisfied.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos HTML5.
+              </video>
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title  textCardProjetos fw-bold">Blog Satisfied</h5>
                 <p class="card-text text_justify">Desenvolvendo um front-end para uma API RESTful. A interface deve
@@ -444,7 +450,10 @@
               </div>
             </div>
             <div class="card bottom shadow-lg boxCardProjetos" style="width: 18rem;">
-              <img src="./assets/imgs/todo.jpeg" class="card-img-top imgProjetos" alt="...">
+              <video id="myVideo" class="video_Projetos" controls autoplay>
+                <source src="./assets/videos/ToDo.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeos HTML5.
+              </video>
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title textCardProjetos fw-bold">ToDo</h5>
                 <p class="card-text text_justify">Este é um projeto inicial de um portfólio de frontend para uma "Lista

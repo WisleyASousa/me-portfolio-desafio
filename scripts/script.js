@@ -14,6 +14,15 @@ window.addEventListener("load", function() {
   highlightItem(initialItem);
 });
 
+/*======= Videos ========*/
+
+let video = document.getElementById("myVideo");
+    video.addEventListener("ended", function() {
+      video.play();
+    });
+
+
+
 /*======= Formulário ========*/
 
 
@@ -159,25 +168,18 @@ function successRemove() {
   setTimeout(function() {
     document.getElementById('msgExcluida').style.display = 'none';
     if (messageList.length !== 0) {
-      // Recarrega a página
       location.reload();
     }
   }
-  , 2000);
+  , 1200);
 }
 
-// Adicione um evento de clique ao elemento pai `cardContainer`
-cardContainer.addEventListener('click', function(event) {
-  successRemove()
-  if (event.target.classList.contains('btn-outline-danger')) {
-    // Verifique se o botão "Excluir" foi clicado
-    let index = event.target.getAttribute('data-index');
-    removeMessage(index);
 
-  }
-});
 // Função para criar e exibir os cards
 function showMessages() {
+  let messageList = JSON.parse(localStorage.getItem('messageList')) || [];
+
+  
   // Obtendo a referência do elemento onde os cards serão exibidos
   let cardContainer = document.getElementById('cardContainer');
 
@@ -204,8 +206,8 @@ function showMessages() {
     cardBody.className = 'card-body';
     cardBody.innerHTML = '<p class="card-text fw-semibold border-bottom bg-info-subtle bg-opacity-10 rounded-4 shadow-sm">' + message.subject + '</p>' + '<p class="card-text ">' + message.message + '</p>';
 
-    let cardFooter = document.createElement('div');
-    cardFooter.className = 'card-footer d-flex flex-column align-items-center gap-4 text-body-secondary';
+    let cardFooter = document.createElement('small');
+    cardFooter.className = 'card-footer d-flex flex-column font-monospace align-items-center gap-4 text-body-secondary';
     cardFooter.innerHTML = message.date;
 
     // Criar o botão de exclusão
@@ -213,13 +215,13 @@ function showMessages() {
     deleteButton.type = 'button';
     deleteButton.className = 'btn w-50 shadow btn-outline-danger';
     deleteButton.setAttribute('data-index', i);
-    deleteButton.innerHTML = 'Excluir';
+    deleteButton.innerHTML = `Excluir`;
 
     // Adicionar evento de clique ao botão de exclusão
     deleteButton.addEventListener('click', function() {
-      // Chamar a função successRemove quando o botão de exclusão for clicado
+      let index = parseInt(this.getAttribute('data-index'));
+      removeMessage(index);
       successRemove();
-
     });
 
     // Adicionar o botão de exclusão ao rodapé do card
