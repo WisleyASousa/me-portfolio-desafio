@@ -154,18 +154,6 @@ function removeMessage(index) {
   showMessages(); 
 }
 
-// Evento load para executar a função successRemove após a página ser recarregada
-// window.addEventListener('load', function() {
-//   // Chama a função successRemove após a página ser recarregada
-//   successRemove();
-// });
-  // Reexibe os cards após a remoção
-  // chamar funcao de sucesso de exclusao apos o reload
-
-// criar funcao de sucesso de exclusao de msg e remover depois de 3 segundos
-// document.getElementById('msgExcluida').style.display = 'none';
-
-
 function successRemove() {
   document.getElementById('msgExcluida').style.display = 'block';
   setTimeout(function() {
@@ -205,16 +193,16 @@ function showMessages() {
   messageList.forEach((message, i) => {
     // Criar os elementos do card
     let card = document.createElement('div');
-    card.className = 'card widget text-center';
+    card.className = 'card widget text-center rounded-4 ';
     card.style.width = '18rem';
 
     let cardHeader = document.createElement('div');
     cardHeader.className = 'card-header';
-    cardHeader.innerHTML = '<h5>' + message.name + '</h5>' + '<p>' + message.email + '</p>';
+    cardHeader.innerHTML = '<h6 class="text-uppercase ">' + message.name + '</h6>' + '<p class="small text_email rounded-4 shadow-sm">' + message.email + '</p>';
 
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
-    cardBody.innerHTML = '<p class="card-text">' + message.message + '</p>';
+    cardBody.innerHTML = '<p class="card-text fw-semibold border-bottom bg-info-subtle bg-opacity-10 rounded-4 shadow-sm">' + message.subject + '</p>' + '<p class="card-text ">' + message.message + '</p>';
 
     let cardFooter = document.createElement('div');
     cardFooter.className = 'card-footer d-flex flex-column align-items-center gap-4 text-body-secondary';
@@ -223,7 +211,7 @@ function showMessages() {
     // Criar o botão de exclusão
     let deleteButton = document.createElement('button');
     deleteButton.type = 'button';
-    deleteButton.className = 'btn w-50 btn-outline-danger';
+    deleteButton.className = 'btn w-50 shadow btn-outline-danger';
     deleteButton.setAttribute('data-index', i);
     deleteButton.innerHTML = 'Excluir';
 
@@ -231,8 +219,7 @@ function showMessages() {
     deleteButton.addEventListener('click', function() {
       // Chamar a função successRemove quando o botão de exclusão for clicado
       successRemove();
-      // Outras ações que você deseja executar ao clicar no botão de exclusão
-      // ...
+
     });
 
     // Adicionar o botão de exclusão ao rodapé do card
@@ -253,7 +240,7 @@ function showMessages() {
 
 // Chamada inicial para exibir os cards existentes
 showMessages();
-// document.getElementById('msgExcluida').style.display = 'none';
+
 
 /*======= scroll progresso bar ========*/
 

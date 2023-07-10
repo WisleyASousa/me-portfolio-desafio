@@ -526,7 +526,7 @@
                 <img src="./assets/svgs/whatsapp.svg" alt="WhatsApp" width="28" height="28">
               </a>
             </div>
-            <div class="alert alert-info d-none" role="alert" id="msgExcluida">
+            <div class="alert alert-info d-none " role="alert" id="msgExcluida">
             </div>
             <form class="container_Form "  id="inputBox" onsubmit="submitForm(event)">
               
@@ -556,13 +556,17 @@
               </div>
               <button type="submit" class="btn my-3 widget btn_Enviar" id="submitEnviar">Enviar</button>
 
-              <div class="alert msgAlert alert-danger  " role="alert"  id="requiredAlert">
-                Por favor, preencha todos os campos!
+              <div class="w-100 d-flex justify-content-center">
 
-              </div>
-
-              <div class="alert msgSucess alert-success alert-dismissible " role="alert"  id="successAlert">
-                Mensagem enviada com sucesso!
+                <div class="alert msgAlert alert-danger  " role="alert"  id="requiredAlert">
+                  Por favor, preencha todos os campos!
+                  
+                </div>
+                
+                <div class="alert msgSucess alert-success" role="alert"  id="successAlert">
+                  Mensagem enviada com sucesso!
+                  
+                </div>
 
               </div>
             </form>
