@@ -68,7 +68,7 @@ a, button {
 .msgAlert {
 
   position: absolute;
-  left: 575px;
+  /* left: 190px; */
 
   display: none; /* Esconder as divs por padrão */
   animation: rubberBand; 
@@ -78,7 +78,6 @@ a, button {
 
 .msgSucess{
   position: absolute;
-  left: 575px;
 
   display: none; /* Esconder as divs por padrão */
   animation: bounceInRight; 
