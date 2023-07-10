@@ -249,7 +249,7 @@ a, button {
   background: var(--color-primary) !important;
   box-shadow: 0px 4px 4px 0px var(--color-shadow) !important;
   width: 300px !important;
-  height: 800px !important;
+  height: 830px !important;
 }
 .img_background {
   background-image: url("../assets/backgrounds/bg-4.jpg") !important;
@@ -352,6 +352,10 @@ a, button {
 @media (min-width: 768px) {
   .container_body{
     padding-top: 3rem !important;
+  }
+  .home, .portfolio, .contact {
+    padding-top: 10rem !important;
+    
   }
   .container_Form {
     width: 400px !important;

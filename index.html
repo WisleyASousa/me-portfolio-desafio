@@ -88,7 +88,7 @@
               que faça aquilo ser sempre o melhor para ele. Desde criança ele sempre teve poucos amigos e quase nunca
               teve alguém com quem poderia contar, mas nem por isso ele desistiu de sonhos e objetivos. Sempre foi um
               grande amante da Tecnologia. Nas horas vagas ele ama um bom Video Game.</p>
-              <button class="py-2 px-4 rounded-pill btn_SaibaMais" id="saiba-mais-btn">Saiba mais</button>
+              <a class="py-2 px-4 rounded-pill btn_SaibaMais" href="#contact">Saiba mais</a>
           </div>
           <img src="./assets/me/eu-1.PNG" class=" mt-4 pt-5 img-fluid img_home" alt="...">
         </section>
@@ -260,6 +260,7 @@
             </div>
           </div>
         </section>
+        <!-- MODAIS -->
 
         <!-- Modal React -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -277,6 +278,10 @@
                 possuía o intuito de otimizar a atualização e a sincronização de atividades simultâneas no feed
                 de notícias da rede social e melhorar a manutenção de código.
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn" href="https://react.dev/" target="_blank">ir ao site</a>
+              </div>
             </div>
           </div>
         </div>
@@ -293,6 +298,10 @@
                 Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por
                 Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites
                 estáticos para aplicativos da web baseados em React.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn" href="https://nextjs.org/" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -316,7 +325,10 @@
                 geralmente são usadas para descrever a aparência/apresentação (CSS) ou a
                 funcionalidade/comportamento (JavaScript) de uma página da web.
               </div>
-
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">ir ao site</a>
+              </div>
             </div>
           </div>
         </div>
@@ -339,7 +351,32 @@
                 diretamente nas tags HTML ou ficar contido dentro das tags. Também é possível, adicionar
                 estilos adicionando um link para um arquivo CSS que contém os estilos.
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">ir ao site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Modal styled-components -->
+         <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
+          <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h1 class="modal-title fw-semibold text-dark fs-5" id="exampleModalLabel">Styled-Components</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body text-dark text_justify">
+                Basicamente, styled components é uma biblioteca que possibilita escrever códigos CSS dentro do JavaScript. Com ele, você pode criar websites bonitos e funcionais. Além disso, ganhar mais agilidade e precisão no desenvolvimento web.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a type="button" class="btn" href="https://styled-components.com/" target="_blank">ir ao site</a>
+              </div>
             </div>
           </div>
         </div>
@@ -347,7 +384,7 @@
         <!-- Portfólio -->
 
         <section
-          class=" img_background w-100 py-5 my-5 d-flex flex-column align-items-center justify-content-center"
+          class=" img_background portfolio w-100 py-5 my-5 d-flex flex-column align-items-center justify-content-center"
           id="portfolio">
           <p class="fw-bold fs-1 w-100 py-2">Projetos mais recente</p>
           <div
@@ -371,7 +408,7 @@
 
                   <p class="textCardProjetos">Tecnologias utilizadas:</p>
 
-                  <div class="d-flex gap-3 justify-content-center">
+                  <div class="d-flex gap-3 justify-content-center flex-wrap">
                     <button type="button"
                       class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
                       data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -387,6 +424,11 @@
                       class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
                       data-bs-toggle="modal" data-bs-target="#exampleModal4">
                       CSS
+                    </button>
+                    <button type="button"
+                      class="btn btnTools bg-light btn-outline-primary   text-primary-emphasis d-flex gap-2 align-items-center justify-content-center"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                      Styled-Components
                     </button>
                   </div>
                   <div class="pt-4 d-flex align-items-center justify-content-center gap-4">
@@ -512,7 +554,7 @@
 
       <!-- Contato -->
 
-      <section class=" container_body d-flex flex-column flex-lg-row align-items-center justify-content-center"
+      <section class=" container_body contact d-flex flex-column flex-lg-row align-items-center justify-content-center"
         id="contact">
         <div
           class="container_Contact py-5 rounded-4 d-flex w-100 flex-column-reverse flex-lg-row align-items-center justify-content-evenly">
