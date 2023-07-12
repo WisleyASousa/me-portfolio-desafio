@@ -26,7 +26,7 @@
         <a class="navbar-brand fs-2 rounded-pill px-2 logoName" href="#">
           Wisley A. Sousa
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -88,7 +88,7 @@
               que faça aquilo ser sempre o melhor para ele. Desde criança ele sempre teve poucos amigos e quase nunca
               teve alguém com quem poderia contar, mas nem por isso ele desistiu de sonhos e objetivos. Sempre foi um
               grande amante da Tecnologia. Nas horas vagas ele ama um bom Video Game.</p>
-              <a class="py-2 px-4 rounded-pill btn_SaibaMais" href="#contact">Saiba mais</a>
+              <a class="py-2 px-4 rounded-pill text-dark btn_SaibaMais" href="#contact">Saiba mais</a>
           </div>
           <img src="./assets/me/eu-1.PNG" class=" mt-4 pt-5 img-fluid img_home" alt="...">
         </section>
@@ -280,7 +280,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn" href="https://react.dev/" target="_blank">ir ao site</a>
+                <a type="button" class="btn text-dark" href="https://react.dev/" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title text-dark fw-semibold fs-5" id="exampleModalLabel">Next.JS</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class=" text-dark-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text_justify text-dark">
                 Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por
@@ -301,7 +301,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn" href="https://nextjs.org/" target="_blank">ir ao site</a>
+                <a type="button" class="btn text-dark" href="https://nextjs.org/" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">ir ao site</a>
+                <a type="button" class="btn text-dark" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -353,7 +353,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">ir ao site</a>
+                <a type="button" class="btn text-dark" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -375,7 +375,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <a type="button" class="btn" href="https://styled-components.com/" target="_blank">ir ao site</a>
+                <a type="button" class="btn text-dark" href="https://styled-components.com/" target="_blank">ir ao site</a>
               </div>
             </div>
           </div>
@@ -619,6 +619,12 @@
                   Mensagem enviada com sucesso!
                   
                 </div>
+                <div class="alert alert-info msg_ExcluirAll d-none" role="alert" id="msgExcluida">
+                  Todas as Mensagens foram excluídas com sucesso!
+                </div>
+          
+                <button type="button" id="deleteMsgsAll" class="btn d-none btn-outline-danger my-4"  data-bs-toggle="modal" data-bs-target="#exampleModal6">Excluir Todas
+                </button>
 
               </div>
             </form>
@@ -633,7 +639,7 @@
   </div>
 
   </div>
-  <footer class="fixed-bottom shadow w-100 container_footer px-4 py-3">
+  <footer class="fixed-bottom text-white shadow w-100 container_footer px-4 py-3">
     <p class="m-0">
       Copyright © 2023 by Wisley A. Sousa | All Rights Reserved.
     </p>

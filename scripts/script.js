@@ -237,13 +237,28 @@ function showMessages() {
   });
 }
 
-
+deleteMsgsAll.addEventListener('click', function() {
+  clearAll();
+});
 
 
 // Chamada inicial para exibir os cards existentes
 showMessages();
 
+// funcao apra apagar todas as msg no local storage
+function clearAll() {
+  localStorage.clear();
+  successRemoveAll()
+}
 
+function successRemoveAll() {
+  document.getElementById('msgExcluidaAll').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('msgExcluidaAll').style.display = 'none';
+    location.reload();
+  }
+  , 2000);
+}
 /*======= scroll progresso bar ========*/
 
 
