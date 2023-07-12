@@ -54,7 +54,7 @@ function submitForm(event) {
     if (name === '' || email === '' || subject === '' || message === '') {
       document.getElementById('requiredAlert').style.display = 'block';
       document.getElementById('successAlert').style.display = 'none';
-      // colcoar uma bordar vermelha nos campos vazios
+      // colocando uma bordar vermelha nos campos vazios
       if (name === '') {
         document.getElementById('nameInput').style.border = '1px solid red';
         document.getElementById('nameInput').classList.add('inputAlert');
@@ -86,7 +86,7 @@ function submitForm(event) {
       return; // Impede o processamento adicional
     }
 
-    // Criar um objeto com as informações do formulário
+    // Criando um objeto com as informações do formulário
     let formData = {
       name: name,
       email: email,
@@ -98,9 +98,9 @@ function submitForm(event) {
     messageList.push(formData);
     localStorage.setItem('messageList', JSON.stringify(messageList));
 
-    showMessages();
+    // showMessages();
 
-    // Limpar os campos do formulário
+    // Limpando os campos do formulário
     document.getElementById('nameInput').value = '';
     document.getElementById('emailInput').value = '';
     document.getElementById('subjectInput').value = '';
@@ -129,7 +129,7 @@ function submitForm(event) {
     }
     , 5000);
 
-    // Adicione um evento de clique à caixa de entrada do formulário
+    // Adicionando um evento de clique à caixa de entrada do formulário
     document.getElementById('inputBox').addEventListener('click', function() {
       // Código a ser executado quando o usuário clicar na caixa de entrada
       document.getElementById('successAlert').style.display = 'none';
@@ -157,7 +157,7 @@ function removeMessage(index) {
   // Remove a mensagem da lista pelo índice
   messageList.splice(index, 1);
 
-  // Atualiza o armazenamento local com a nova lista de mensagens
+  // Atualizando o armazenamento local com a nova lista de mensagens
   localStorage.setItem('messageList', JSON.stringify(messageList));
 
   showMessages(); 
@@ -186,7 +186,7 @@ function showMessages() {
   // Limpar o conteúdo existente
   cardContainer.innerHTML = '';
 
-  // colocar texto caso não tenha mensagens
+  // colocando texto caso não tenha mensagens
   if (messageList.length === 0) {
     cardContainer.innerHTML = '<p class="text-center text-white bottom">Nenhuma mensagem recebida</p>';
     return;
@@ -217,22 +217,22 @@ function showMessages() {
     deleteButton.setAttribute('data-index', i);
     deleteButton.innerHTML = `Excluir`;
 
-    // Adicionar evento de clique ao botão de exclusão
+    // Adicionando evento de clique ao botão de exclusão
     deleteButton.addEventListener('click', function() {
       let index = parseInt(this.getAttribute('data-index'));
       removeMessage(index);
       successRemove();
     });
 
-    // Adicionar o botão de exclusão ao rodapé do card
+    // Adicionando o botão de exclusão ao rodapé do card
     cardFooter.appendChild(deleteButton);
 
-    // Adicionar os elementos ao card
+    // Adicionando os elementos ao card
     card.appendChild(cardHeader);
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
 
-    // Adicionar o card ao container
+    // Adicionando o card ao container
     cardContainer.appendChild(card);
   });
 }
