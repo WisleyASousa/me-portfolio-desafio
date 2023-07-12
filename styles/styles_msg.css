@@ -17,6 +17,13 @@
   animation: rubberBand; 
   animation-duration: 0.5s; 
 }
+.msg_ExcluirAll{
+  /* position: absolute; */
+  /* top: 100px; */
+  display: none; 
+  animation: rollIn; 
+  animation-duration: 0.5s; 
+}
 
 .text_email {
   background-color: var(--color-primary) !important;

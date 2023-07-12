@@ -17,9 +17,10 @@
   <link rel="stylesheet" href="../styles/styles_msg.css">
   <title>Portfólio - Wisley A. Sousa</title>
 </head>
+
 <body>
-  <header >
-    <nav class="navbar fixed-top  shadow container_NavBar navbar-expand px-4 bg-body-tertiary">
+  <header>
+    <nav class="navbar fixed-top shadow container_NavBar navbar-expand px-4 bg-body-tertiary">
       <div class="container-fluid  d-flex align-items-center">
         <a class="navbar-brand fs-2 rounded-pill px-2 logoName" href="#">
           Wisley A. Sousa
@@ -27,8 +28,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto text-center gap-2 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active rounded-pill" title="Início" onclick="highlightItem(this)"
-                href="../index.html"> Voltar</a>
+              <a class="nav-link active rounded-pill" title="Início" onclick="highlightItem(this)" href="../index.html">
+                Voltar</a>
             </li>
           </ul>
         </div>
@@ -44,14 +45,20 @@
       <h2 class="text-white display-6 fw-bold top m-0 py-4">Mensagens de Contato</h2>
       <div class="d-flex gap-4 justify-content-center pb-5 flex-wrap">
         <div id="cardContainer" class="d-flex gap-4 justify-content-center flex-wrap"></div>
-         
+
       </div>
       <div class="alert alert-info msg_Excluir" role="alert" id="msgExcluida">
         Mensagem excluída com sucesso!
       </div>
+      <div class="alert alert-info msg_ExcluirAll" role="alert" id="msgExcluidaAll">
+        Todas as Mensagens foram excluídas com sucesso!
+      </div>
+
+      <button type="button" id="deleteMsgsAll" class="btn btn-outline-danger my-4"  data-bs-toggle="modal" data-bs-target="#exampleModal6">Excluir Todas
+      </button>
   </main>
 
-  <footer class="fixed-bottom shadow w-100 container_footer px-4 py-3">
+  <footer class="fixed-bottom text-white shadow w-100 container_footer px-4 py-3">
     <p class="m-0">
       Copyright © 2023 by Wisley A. Sousa | All Rights Reserved.
     </p>
@@ -78,4 +85,5 @@
   </footer>
   <script src="../scripts/script.js"></script>
 </body>
+
 </html>
