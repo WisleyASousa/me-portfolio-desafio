@@ -241,6 +241,10 @@ deleteMsgsAll.addEventListener('click', function() {
   clearAll();
 });
 
+if(messageList.length === 0) {
+  document.getElementById('deleteMsgsAll').style.display = 'none';
+}
+
 
 // Chamada inicial para exibir os cards existentes
 showMessages();
